@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Ankit Kumar - Professional Freelance Web Developer specializing in responsive website design, landing pages, and UI development. Clean code, fast delivery, client-focused approach." />
+  <meta name="keywords" content="freelance web developer, website design, frontend developer, responsive design, HTML CSS JavaScript, landing page development, UI design" />
+  <meta name="author" content="Ankit Kumar" />
+  <meta property="og:title" content="Ankit Kumar | Freelance Web Developer" />
+  <meta property="og:description" content="Transform your ideas into stunning, responsive websites. Professional freelance web developer with expertise in modern web technologies." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://yourwebsite.com" />
+  <title>Ankit Kumar | Freelance Web Developer - Responsive Websites & Landing Pages</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👨‍💻</text></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,700&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <nav class="nav-container">
+      <div class="nav-logo">
+        <span class="logo-bracket">&lt;</span>
+        <span class="logo-text">Ankit</span>
+        <span class="logo-bracket">/&gt;</span>
+      </div>
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="#home" class="nav-link">Home</a></li>
+        <li><a href="#services" class="nav-link">Services</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#resume" class="nav-link">Resume</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+          <i class="fas fa-sun sun-icon"></i>
+          <i class="fas fa-moon moon-icon"></i>
+        </button>
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section id="home" class="hero">
+    <div class="hero-container">
+      <div class="hero-content">
+        <div class="hero-tag">
+          <i class="fas fa-code"></i>
+          <span>Available for Freelance Work</span>
+        </div>
+        <h1 class="hero-title">
+          I Build <span class="gradient-text">Stunning Websites</span><br>
+          That Drive Results
+        </h1>
+        <p class="hero-description">
+          Transform your ideas into fast, responsive, and conversion-focused web experiences. 
+          From landing pages to full websites - I deliver clean code and beautiful design.
+        </p>
+        <div class="hero-cta">
+          <a href="#projects" class="btn btn-primary">
+            <span>View My Work</span>
+            <i class="fas fa-arrow-right"></i>
+          </a>
+          <a href="#contact" class="btn btn-secondary">
+            <span>Hire Me</span>
+            <i class="fas fa-paper-plane"></i>
+          </a>
+          <a href="ankit_kumar.pdf" download="Ankit_Kumar_Resume.pdf" class="btn btn-resume">
+            <i class="fas fa-download"></i>
+            <span>Download CV</span>
+          </a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat">
+            <div class="stat-number">10+</div>
+            <div class="stat-label">Projects Built</div>
+          </div>
+          <div class="stat">
+            <div class="stat-number">Fast</div>
+            <div class="stat-label">Delivery</div>
+          </div>
+          <div class="stat">
+            <div class="stat-number">100%</div>
+            <div class="stat-label">Dedication</div>
+          </div>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="floating-card card-1">
+          <div class="card-icon"><i class="fas fa-laptop-code"></i></div>
+          <div class="card-text">Responsive Design</div>
+        </div>
+        <div class="floating-card card-2">
+          <div class="card-icon"><i class="fas fa-rocket"></i></div>
+          <div class="card-text">Fast Performance</div>
+        </div>
+        <div class="floating-card card-3">
+          <div class="card-icon"><i class="fas fa-palette"></i></div>
+          <div class="card-text">Modern UI</div>
+        </div>
+        <div class="hero-circle circle-1"></div>
+        <div class="hero-circle circle-2"></div>
+        <div class="hero-circle circle-3"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES SECTION -->
+  <section id="services" class="services">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">What I Offer</span>
+        <h2 class="section-title">Services That Solve Your Problems</h2>
+        <p class="section-description">Professional web development services tailored to your business needs</p>
+      </div>
+      <div class="services-grid">
+        <div class="service-card" data-aos>
+          <div class="service-icon"><i class="fas fa-paint-brush"></i></div>
+          <h3 class="service-title">Website Design</h3>
+          <p class="service-description">Custom-designed websites that reflect your brand identity and captivate your audience with modern, intuitive interfaces.</p>
+          <div class="service-features">
+            <span><i class="fas fa-check"></i> Custom Design</span>
+            <span><i class="fas fa-check"></i> Brand Focused</span>
+            <span><i class="fas fa-check"></i> User-Friendly</span>
+          </div>
+        </div>
+        <div class="service-card" data-aos>
+          <div class="service-icon"><i class="fas fa-code"></i></div>
+          <h3 class="service-title">Landing Page Development</h3>
+          <p class="service-description">High-converting landing pages optimized for conversions, built with clean code and focused on driving results for your campaigns.</p>
+          <div class="service-features">
+            <span><i class="fas fa-check"></i> Conversion Focused</span>
+            <span><i class="fas fa-check"></i> SEO Optimized</span>
+            <span><i class="fas fa-check"></i> Fast Loading</span>
+          </div>
+        </div>
+        <div class="service-card" data-aos>
+          <div class="service-icon"><i class="fas fa-mobile-alt"></i></div>
+          <h3 class="service-title">Responsive Redesign</h3>
+          <p class="service-description">Transform outdated websites into modern, mobile-responsive experiences that work flawlessly across all devices and screen sizes.</p>
+          <div class="service-features">
+            <span><i class="fas fa-check"></i> Mobile First</span>
+            <span><i class="fas fa-check"></i> Cross-Browser</span>
+            <span><i class="fas fa-check"></i> Performance</span>
+          </div>
+        </div>
+        <div class="service-card" data-aos>
+          <div class="service-icon"><i class="fas fa-magic"></i></div>
+          <h3 class="service-title">UI Improvements</h3>
+          <p class="service-description">Enhance user experience with modern UI updates, smooth animations, and accessibility improvements that engage your visitors.</p>
+          <div class="service-features">
+            <span><i class="fas fa-check"></i> Modern UI</span>
+            <span><i class="fas fa-check"></i> Animations</span>
+            <span><i class="fas fa-check"></i> Accessible</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS SECTION -->
+  <section id="projects" class="projects">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Portfolio</span>
+        <h2 class="section-title">Recent Projects</h2>
+        <p class="section-description">Explore my latest work and see how I solve real problems for clients</p>
+      </div>
+      <div class="projects-grid">
+
+        <!-- Project 1: Finance Tracker (replaces To-Do List) -->
+        <article class="project-card" data-aos>
+          <div class="project-image">
+            <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=800&h=500&fit=crop" alt="Finance Tracker Application">
+            <div class="project-overlay">
+              <div class="project-links">
+                <a href="https://devankit-07.github.io/finance-tracker/" class="project-link" target="_blank" aria-label="View Live Demo">
+                  <i class="fas fa-external-link-alt"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">Finance Tracker</h3>
+            <p class="project-description">
+              A smart and intuitive finance tracker that helps users manage income, expenses, and savings goals with a clean and visual dashboard.
+            </p>
+            <div class="project-tech">
+              <span class="tech-tag">HTML</span>
+              <span class="tech-tag">CSS</span>
+              <span class="tech-tag">JavaScript</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 2: Weather Dashboard -->
+        <article class="project-card" data-aos>
+          <div class="project-image">
+            <img src="https://images.unsplash.com/photo-1592210454359-9043f067919b?w=800&h=500&fit=crop" alt="Weather Dashboard">
+            <div class="project-overlay">
+              <div class="project-links">
+                <a href="https://devankit-07.github.io/climate07/" class="project-link" target="_blank" aria-label="View Live Demo">
+                  <i class="fas fa-external-link-alt"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">Weather Dashboard</h3>
+            <p class="project-description">
+              Real-time weather application with beautiful UI, displaying current conditions and forecasts using OpenWeather API.
+            </p>
+            <div class="project-tech">
+              <span class="tech-tag">HTML</span>
+              <span class="tech-tag">CSS</span>
+              <span class="tech-tag">JavaScript</span>
+              <span class="tech-tag">API</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 3: Business Landing Page -->
+        <article class="project-card" data-aos>
+          <div class="project-image">
+            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=500&fit=crop" alt="Business Landing Page">
+            <div class="project-overlay">
+              <div class="project-links">
+                <a href="https://devankit-07.github.io/project/" class="project-link" target="_blank" aria-label="View Live Demo">
+                  <i class="fas fa-external-link-alt"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">Business Landing Page</h3>
+            <p class="project-description">
+              Conversion-optimized landing page for a SaaS product, featuring modern design and smooth scroll animations.
+            </p>
+            <div class="project-tech">
+              <span class="tech-tag">HTML</span>
+              <span class="tech-tag">CSS</span>
+              <span class="tech-tag">JavaScript</span>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS SECTION -->
+  <section id="skills" class="skills">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Technical Expertise</span>
+        <h2 class="section-title">Skills & Technologies</h2>
+        <p class="section-description">Proficient in modern web technologies and best practices</p>
+      </div>
+      <div class="skills-container">
+        <div class="skill-item" data-aos>
+          <div class="skill-header">
+            <span class="skill-name">HTML5</span>
+            <span class="skill-percentage">95%</span>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-progress" data-progress="95"></div>
+          </div>
+        </div>
+        <div class="skill-item" data-aos>
+          <div class="skill-header">
+            <span class="skill-name">CSS3 / Tailwind</span>
+            <span class="skill-percentage">90%</span>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-progress" data-progress="90"></div>
+          </div>
+        </div>
+        <div class="skill-item" data-aos>
+          <div class="skill-header">
+            <span class="skill-name">JavaScript</span>
+            <span class="skill-percentage">85%</span>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-progress" data-progress="85"></div>
+          </div>
+        </div>
+        <div class="skill-item" data-aos>
+          <div class="skill-header">
+            <span class="skill-name">Java</span>
+            <span class="skill-percentage">75%</span>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-progress" data-progress="75"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY CHOOSE ME SECTION -->
+  <section id="why-choose" class="why-choose">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Why Work With Me</span>
+        <h2 class="section-title">What Sets Me Apart</h2>
+        <p class="section-description">Client satisfaction is my top priority</p>
+      </div>
+      <div class="features-grid">
+        <div class="feature-card" data-aos>
+          <div class="feature-icon"><i class="fas fa-bolt"></i></div>
+          <h3 class="feature-title">Fast Delivery</h3>
+          <p class="feature-description">Quick turnaround times without compromising quality. Your project delivered on schedule, every time.</p>
+        </div>
+        <div class="feature-card" data-aos>
+          <div class="feature-icon"><i class="fas fa-code-branch"></i></div>
+          <h3 class="feature-title">Clean Code</h3>
+          <p class="feature-description">Well-structured, maintainable, and documented code following industry best practices and standards.</p>
+        </div>
+        <div class="feature-card" data-aos>
+          <div class="feature-icon"><i class="fas fa-mobile-screen-button"></i></div>
+          <h3 class="feature-title">Responsive Design</h3>
+          <p class="feature-description">Pixel-perfect designs that work seamlessly across all devices and screen sizes, guaranteed.</p>
+        </div>
+        <div class="feature-card" data-aos>
+          <div class="feature-icon"><i class="fas fa-handshake"></i></div>
+          <h3 class="feature-title">Client-Focused</h3>
+          <p class="feature-description">Clear communication, regular updates, and dedicated support throughout the entire development process.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT SECTION -->
+  <section id="about" class="about">
+    <div class="container">
+      <div class="about-content">
+        <div class="about-image" data-aos>
+          <div class="about-img-wrapper">
+            <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=600&h=700&fit=crop" alt="Ankit Kumar - Freelance Developer">
+            <div class="about-img-overlay"></div>
+          </div>
+        </div>
+        <div class="about-text" data-aos>
+          <span class="section-tag">About Me</span>
+          <h2 class="section-title">Passionate About Creating Exceptional Web Experiences</h2>
+          <p class="about-description">
+            Hi! I'm Ankit Kumar, a passionate frontend developer specializing in building modern, 
+            responsive websites that help businesses grow online. With a strong foundation in HTML, CSS, 
+            and JavaScript, I transform ideas into beautiful, functional digital experiences.
+          </p>
+          <p class="about-description">
+            As a dedicated learner and problem solver, I believe that great design combined with clean code 
+            creates websites that not only look amazing but also perform exceptionally. Every project is an 
+            opportunity to learn, grow, and craft something unique that serves both business goals and user needs.
+          </p>
+          <div class="about-highlights">
+            <div class="highlight-item">
+              <i class="fas fa-check-circle"></i>
+              <span>Quick Learner</span>
+            </div>
+            <div class="highlight-item">
+              <i class="fas fa-check-circle"></i>
+              <span>Modern Technologies</span>
+            </div>
+            <div class="highlight-item">
+              <i class="fas fa-check-circle"></i>
+              <span>Passionate Developer</span>
+            </div>
+          </div>
+          <div class="about-cta">
+            <a href="#contact" class="btn btn-primary">
+              <span>Let's Work Together</span>
+              <i class="fas fa-arrow-right"></i>
+            </a>
+            <a href="mailto:ankitdevx.26@gmail.com" class="btn btn-text">
+              <i class="fas fa-envelope"></i>
+              <span>Send Email</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA SECTION -->
+  <section class="cta-section">
+    <div class="container">
+      <div class="cta-content" data-aos>
+        <h2 class="cta-title">Ready to Bring Your Project to Life?</h2>
+        <p class="cta-description">Let's create something amazing together. Get in touch and let's discuss how I can help your business succeed online.</p>
+        <a href="#contact" class="btn btn-cta">
+          <span>Start Your Project</span>
+          <i class="fas fa-rocket"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT SECTION -->
+  <section id="contact" class="contact">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Get In Touch</span>
+        <h2 class="section-title">Let's Start a Conversation</h2>
+        <p class="section-description">Have a project in mind? Fill out the form below and I'll get back to you within 24 hours</p>
+      </div>
+      <div class="contact-wrapper">
+        <div class="contact-info" data-aos>
+          <div class="contact-info-item">
+            <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+            <div class="contact-details">
+              <h4>Email</h4>
+              <a href="mailto:ankitdevx.26@gmail.com">ankitdevx.26@gmail.com</a>
+            </div>
+          </div>
+          <div class="contact-info-item">
+            <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+            <div class="contact-details">
+              <h4>Location</h4>
+              <p>New Delhi, India</p>
+            </div>
+          </div>
+          <div class="contact-info-item">
+            <div class="contact-icon"><i class="fas fa-clock"></i></div>
+            <div class="contact-details">
+              <h4>Response Time</h4>
+              <p>Within 24 hours</p>
+            </div>
+          </div>
+          <div class="contact-socials">
+            <a href="https://github.com" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://linkedin.com/in/ankit0726" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="https://instagram.com/heyy_ankit_07" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://x.com/AnkitKumar61424" target="_blank" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+          </div>
+        </div>
+        <form action="https://formspree.io/f/mnnlnakw" method="POST" id="contactForm" class="contact-form" data-aos>
+          <div class="form-group">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" required placeholder="John Doe">
+            <span class="form-error" id="nameError"></span>
+          </div>
+          <div class="form-group">
+            <label for="email">Your Email</label>
+            <input type="email" id="email" name="email" required placeholder="john@example.com">
+            <span class="form-error" id="emailError"></span>
+          </div>
+          <div class="form-group">
+            <label for="message">Your Message</label>
+            <textarea id="message" name="message" rows="5" required placeholder="Tell me about your project..."></textarea>
+            <span class="form-error" id="messageError"></span>
+          </div>
+          <button type="submit" class="btn btn-primary btn-submit">
+            <span class="btn-text">Send Message</span>
+            <span class="btn-loader"></span>
+            <i class="fas fa-paper-plane"></i>
+          </button>
+          <div class="form-message" id="formMessage"></div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- RESUME SECTION -->
+  <section id="resume" class="resume-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">My Resume</span>
+        <h2 class="section-title">Download My CV</h2>
+        <p class="section-description">Get a complete overview of my skills, education, and experience</p>
+      </div>
+      <div class="resume-card" data-aos>
+        <div class="resume-preview">
+          <div class="resume-mockup">
+            <div class="resume-mock-header">
+              <div class="mock-name">ANKIT KUMAR</div>
+              <div class="mock-contact">ankitdevx.26@gmail.com · 9354098287</div>
+              <div class="mock-line"></div>
+            </div>
+            <div class="resume-mock-body">
+              <div class="mock-section-title">EDUCATION</div>
+              <div class="mock-text">Uttranchal University — BCA (Pursuing)</div>
+              <div class="mock-text light">Jan 2025 – Jan 2028</div>
+              <div class="mock-section-title">EXPERIENCE</div>
+              <div class="mock-text">Settle-Up Capital · Sales Executive Intern</div>
+              <div class="mock-text">Acuitty Tech · Associate Operation</div>
+              <div class="mock-section-title">SKILLS</div>
+              <div class="mock-tags">
+                <span>C</span><span>Java</span><span>HTML</span><span>CSS</span><span>JS</span><span>Git</span>
+              </div>
+            </div>
+          </div>
+          <div class="resume-glow"></div>
+        </div>
+        <div class="resume-info">
+          <div class="resume-detail-item">
+            <div class="resume-detail-icon"><i class="fas fa-graduation-cap"></i></div>
+            <div>
+              <h4>Education</h4>
+              <p>BCA — Uttranchal University (2025–2028)</p>
+            </div>
+          </div>
+          <div class="resume-detail-item">
+            <div class="resume-detail-icon"><i class="fas fa-briefcase"></i></div>
+            <div>
+              <h4>Experience</h4>
+              <p>Sales Intern + Associate Operation</p>
+            </div>
+          </div>
+          <div class="resume-detail-item">
+            <div class="resume-detail-icon"><i class="fas fa-code"></i></div>
+            <div>
+              <h4>Tech Skills</h4>
+              <p>HTML, CSS, JS, Java (Learning), C, Git</p>
+            </div>
+          </div>
+          <div class="resume-detail-item">
+            <div class="resume-detail-icon"><i class="fas fa-map-marker-alt"></i></div>
+            <div>
+              <h4>Location</h4>
+              <p>New Delhi, India</p>
+            </div>
+          </div>
+          <div class="resume-actions">
+            <a href="ankit_kumar.pdf" download="Ankit_Kumar_Resume.pdf" class="btn btn-primary">
+              <i class="fas fa-download"></i>
+              <span>Download Resume (PDF)</span>
+            </a>
+            <a href="ankit_kumar.pdf" target="_blank" class="btn btn-secondary">
+              <i class="fas fa-eye"></i>
+              <span>Preview Online</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-col">
+          <div class="footer-logo">
+            <span class="logo-bracket">&lt;</span>
+            <span class="logo-text">Ankit</span>
+            <span class="logo-bracket">/&gt;</span>
+          </div>
+          <p class="footer-description">Crafting beautiful and functional websites that help businesses succeed online.</p>
+          <div class="footer-socials">
+            <a href="https://github.com" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://linkedin.com/in/ankit0726" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="https://instagram.com/heyy_ankit_07" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://x.com/AnkitKumar61424" target="_blank" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-title">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#about">About</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-title">Services</h4>
+          <ul class="footer-links">
+            <li><a href="#services">Website Design</a></li>
+            <li><a href="#services">Landing Pages</a></li>
+            <li><a href="#services">Responsive Redesign</a></li>
+            <li><a href="#services">UI Improvements</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-title">Contact</h4>
+          <ul class="footer-links">
+            <li><a href="mailto:ankitdevx.26@gmail.com">ankitdevx.26@gmail.com</a></li>
+            <li><a href="#contact">Send Message</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copyright">
+          © 2025 Ankit Kumar. Built with <i class="fas fa-heart"></i> using HTML, CSS & JavaScript
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- BACK TO TOP BUTTON -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <script src="script.js"></script>
+</body>
+</html>
