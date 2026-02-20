@@ -154,7 +154,7 @@ function initScrollReveal() {
       }
     });
   }, {
-    threshold: 0.05,          // trigger when just 5% visible
+    threshold: 0.05,
     rootMargin: '0px 0px 0px 0px'
   });
 
@@ -284,7 +284,6 @@ if (contactForm) {
   contactForm.addEventListener('submit', async (e) => {
     e.preventDefault();
     
-    // Validate all fields
     const nameError = validateName(nameInput.value);
     const emailError = validateEmail(emailInput.value);
     const messageError = validateMessage(messageInput.value);
@@ -293,7 +292,6 @@ if (contactForm) {
     document.getElementById('emailError').textContent = emailError;
     document.getElementById('messageError').textContent = messageError;
     
-    // If there are errors, don't submit
     if (nameError || emailError || messageError) {
       if (nameError) nameInput.style.borderColor = '#ef4444';
       if (emailError) emailInput.style.borderColor = '#ef4444';
@@ -301,13 +299,11 @@ if (contactForm) {
       return;
     }
     
-    // Show loading state
     submitButton.classList.add('loading');
     submitButton.disabled = true;
     formMessage.style.display = 'none';
     
     try {
-      // Submit form to Formspree
       const formData = new FormData(contactForm);
       const response = await fetch(contactForm.action, {
         method: 'POST',
@@ -317,36 +313,29 @@ if (contactForm) {
         }
       });
       
-      // Reset loading state
       submitButton.classList.remove('loading');
       submitButton.disabled = false;
       
       if (response.ok) {
-        // Success
         formMessage.textContent = '✓ Message sent successfully! I\'ll get back to you within 24 hours.';
         formMessage.className = 'form-message success';
         formMessage.style.display = 'block';
         
-        // Reset form
         contactForm.reset();
         
-        // Reset input styles
         [nameInput, emailInput, messageInput].forEach(input => {
           input.style.borderColor = 'transparent';
         });
         
-        // Hide success message after 5 seconds
         setTimeout(() => {
           formMessage.style.display = 'none';
         }, 5000);
       } else {
-        // Error
         formMessage.textContent = '✗ Oops! Something went wrong. Please try again or email me directly.';
         formMessage.className = 'form-message error';
         formMessage.style.display = 'block';
       }
     } catch (error) {
-      // Network error
       submitButton.classList.remove('loading');
       submitButton.disabled = false;
       
@@ -361,7 +350,6 @@ if (contactForm) {
 // TYPING ANIMATION (HERO)
 // ========================================
 
-// Check if Typed.js is loaded
 if (typeof Typed !== 'undefined') {
   const typingElement = document.querySelector('.typing');
   
@@ -384,35 +372,43 @@ if (typeof Typed !== 'undefined') {
 }
 
 // ========================================
-// COUNTER ANIMATION (STATS)
+// COUNTER ANIMATION (STATS) — NaN Bug Fixed
 // ========================================
 
 function animateCounter(element, target, duration = 2000) {
-  const start = 0;
+  // FIX: if target is NaN (e.g. stat is "Fast"), leave it as original text
+  if (isNaN(target)) return;
+
+  const suffix = element.dataset.original.replace(/[0-9]/g, ''); // e.g. "+" or "%"
+  let current = 0;
   const increment = target / (duration / 16);
-  let current = start;
   
   const timer = setInterval(() => {
     current += increment;
     
     if (current >= target) {
-      element.textContent = target + (element.textContent.includes('%') ? '%' : '+');
+      element.textContent = target + suffix;
       clearInterval(timer);
     } else {
-      element.textContent = Math.floor(current) + (element.textContent.includes('%') ? '%' : '+');
+      element.textContent = Math.floor(current) + suffix;
     }
   }, 16);
 }
 
 function initCounters() {
   const statNumbers = document.querySelectorAll('.stat-number');
+
+  // FIX: save original text before animating so "Fast" stays as "Fast"
+  statNumbers.forEach(el => {
+    el.dataset.original = el.textContent.trim();
+  });
   
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting && !entry.target.classList.contains('counted')) {
         entry.target.classList.add('counted');
-        const text = entry.target.textContent;
-        const value = parseInt(text.replace(/\D/g, ''));
+        const original = entry.target.dataset.original;
+        const value = parseInt(original.replace(/\D/g, ''), 10);
         animateCounter(entry.target, value);
         observer.unobserve(entry.target);
       }
@@ -428,7 +424,6 @@ document.addEventListener('DOMContentLoaded', initCounters);
 // PERFORMANCE OPTIMIZATION
 // ========================================
 
-// Debounce function for scroll events
 function debounce(func, wait = 10) {
   let timeout;
   return function executedFunction(...args) {
@@ -493,7 +488,6 @@ console.log(
 // ========================================
 
 window.addEventListener('load', () => {
-  // Remove any loading screens if present
   const loader = document.querySelector('.page-loader');
   if (loader) {
     loader.style.opacity = '0';
@@ -502,7 +496,6 @@ window.addEventListener('load', () => {
     }, 300);
   }
   
-  // Trigger initial animations
   document.body.classList.add('loaded');
 });
 
@@ -518,7 +511,6 @@ document.addEventListener('keydown', (e) => {
   konamiCode = konamiCode.slice(-konamiSequence.length);
   
   if (konamiCode.join('') === konamiSequence.join('')) {
-    // Easter egg activated!
     document.body.style.animation = 'rainbow 2s linear infinite';
     
     const style = document.createElement('style');
@@ -541,7 +533,6 @@ document.addEventListener('keydown', (e) => {
 // UTILITY FUNCTIONS
 // ========================================
 
-// Check if element is in viewport
 function isInViewport(element) {
   const rect = element.getBoundingClientRect();
   return (
@@ -563,9 +554,7 @@ if (copyrightElement && copyrightElement.textContent.includes('2025')) {
 // ACCESSIBILITY ENHANCEMENTS
 // ========================================
 
-// Add keyboard navigation support
 document.addEventListener('keydown', (e) => {
-  // Skip to main content with 'S' key
   if (e.key === 's' && e.ctrlKey) {
     e.preventDefault();
     const mainContent = document.querySelector('main') || document.querySelector('#home');
@@ -576,7 +565,6 @@ document.addEventListener('keydown', (e) => {
   }
 });
 
-// Add focus visible for better keyboard navigation
 document.addEventListener('keydown', (e) => {
   if (e.key === 'Tab') {
     document.body.classList.add('keyboard-nav');
